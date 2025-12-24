@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลสินค้าเศรษฐกิจด้านปศุสัตว์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>รายงานสินค้าเศรษฐกิจสำคัญด้านปศุสัตว์</h1>
+                <p>ที่มา: สำนักงานปศุสัตว์จังหวัดพิษณุโลก (2568)</p>
+            </div>
+            <div class="header-controls">
+                <button id="editBtn" class="btn btn-primary" onclick="toggleEditMode()">
+                    <span class="icon">✏️</span> แก้ไขข้อมูล
+                </button>
+                <button id="saveBtn" class="btn btn-success hidden" onclick="saveData()">
+                    <span class="icon">💾</span> บันทึก
+                </button>
+                <button id="cancelBtn" class="btn btn-danger hidden" onclick="cancelEdit()">
+                    ยกเลิก
+                </button>
+            </div>
+        </header>
+
+        <section class="chart-section">
+            <div class="card">
+                <h2>มูลค่ารวมแยกตามประเภทสินค้า (ล้านบาท)</h2>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="card">
+                <h2>ตารางรายละเอียดข้อมูล</h2>
+                <div class="table-responsive">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>สินค้า</th>
+                                <th>จำนวนเกษตรกร (ราย)</th>
+                                <th>ผลผลิต (จำนวน)</th>
+                                <th>หน่วย</th>
+                                <th>ราคาเฉลี่ย (บาท/หน่วย)</th>
+                                <th>มูลค่า (ล้านบาท)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
